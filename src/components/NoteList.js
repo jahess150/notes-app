@@ -3,7 +3,7 @@ import Note from "./Note";
 
 export default function NoteList() {
     return (
-        <div class='note-list'>
+        <div className='note-list'>
             <Note />
         </div>
     );

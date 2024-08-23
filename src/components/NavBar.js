@@ -2,11 +2,17 @@ import React from "react";
 
 export default function NavBar() {
     return (
-        <nav class='navbar'>
+        <nav className='navbar'>
             <p>Hello, Josh!</p>
-            <button>Search</button>
-            <button>Add Note</button>
-            <button>Settings</button>
+            <a href='/' className='icon-button'>
+                <span className='material-icons'>search</span>
+            </a>
+            <a href='/' className='icon-button'>
+                <span className='material-icons'>add</span>
+            </a>
+            <a href='/' className='icon-button'>
+                <span className='material-icons'>settings</span>
+            </a>
         </nav>
     );
 }

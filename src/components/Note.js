@@ -2,10 +2,14 @@ import React from "react";
 
 export default function Note() {
     return (
-        <div class='note'>
+        <div className='note'>
             <p>This is an example note</p>
-            <button>Edit</button>
-            <button>Delete</button>
+            <a href='/' className='icon-button'>
+                <span className='material-icons'>edit</span>
+            </a>
+            <a href='/' className='icon-button'>
+                <span className='material-icons'>delete</span>
+            </a>
         </div>
     );
 }
