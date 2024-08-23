@@ -1,0 +1,96 @@
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    text-align: center;
+    width: 350px;
+    background-color: #ffffff;
+    border: 2px solid #13274f;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+header {
+    background-color: #13274f;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #e7a801;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #13274f;
+    border-radius: 6px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #e7a801;
+}
+
+.note-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.note {
+    background-color: #ce1141;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    text-align: left;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.note h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #e7a801;
+}
+
+.note p {
+    margin: 5px 0 0;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+.button {
+    background-color: #13274f;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #ce1141;
+    color: #e7a801;
+}
