@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Note(note) {
+export default function Note({ note }) {
     return (
         <li className='note'>
             <h3 className='note-title'>{note.title}</h3>

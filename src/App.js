@@ -16,7 +16,12 @@ function App() {
         <div className='App'>
             <h1>Josh's Notes App</h1>
             <NavBar />
-            <NoteList notes={notes} />
+            <NoteList
+                notes={[
+                    { title: "1st note", content: "Body for 1st note" },
+                    { title: "2nd note", content: "Body for 2nd note" },
+                ]}
+            />
             <Footer />
         </div>
     );
