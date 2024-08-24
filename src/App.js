@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import NavBar from "./components/NavBar";
 import NoteList from "./components/NoteList";
 import Footer from "./components/Footer";
+import AddNote from "./components/AddNote";
 import "./App.css";
 
 function App() {
@@ -50,11 +51,21 @@ function App() {
         setNotes(updatedNotes);
     }
 
+    /* ------ ADDNOTE LOGIC ------ */
+    // Create boolean in state to decide whether to render the AddNote component
+    const [showAddNote, setShowAddNote] = useState(false);
+
+    // Function to toggle the AddNote component
+    const toggleAddNote = () => {
+        setShowAddNote(!showAddNote);
+    }
+
     /* ------ APP ENTRY POINT ----- */
     return (
         <div className='App'>
             <h1>Josh's Notes App</h1>
-            <NavBar />
+            <NavBar onAddClick={toggleAddNote} />
+            {showAddNote && <AddNote onFinish={toggleAddNote} />}
             <NoteList
                 notes={[
                     { title: "1st note", content: "Body for 1st note" },
