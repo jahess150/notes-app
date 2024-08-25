@@ -70,7 +70,11 @@ function App() {
             {showAddNote && (
                 <AddNote onFinish={toggleAddNote} onSave={addNote} />
             )}
-            <NoteList notes={notes} />
+            <NoteList
+                notes={notes}
+                editFunction={editNote}
+                deleteFunction={deleteNote}
+            />
             <Footer />
         </div>
     );
