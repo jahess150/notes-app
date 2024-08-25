@@ -47,9 +47,11 @@ function App() {
 
     // Delete a note
     const deleteNote = (noteToDelete) => {
-        const updatedNotes = notes.filter((note) => note.id !== noteToDelete.id);
+        const updatedNotes = notes.filter(
+            (note) => note.id !== noteToDelete.id
+        );
         setNotes(updatedNotes);
-    }
+    };
 
     /* ------ ADDNOTE LOGIC ------ */
     // Create boolean in state to decide whether to render the AddNote component
@@ -58,20 +60,17 @@ function App() {
     // Function to toggle the AddNote component
     const toggleAddNote = () => {
         setShowAddNote(!showAddNote);
-    }
+    };
 
     /* ------ APP ENTRY POINT ----- */
     return (
         <div className='App'>
             <h1>Josh's Notes App</h1>
             <NavBar onAddClick={toggleAddNote} />
-            {showAddNote && <AddNote onFinish={toggleAddNote} />}
-            <NoteList
-                notes={[
-                    { title: "1st note", content: "Body for 1st note" },
-                    { title: "2nd note", content: "Body for 2nd note" },
-                ]}
-            />
+            {showAddNote && (
+                <AddNote onFinish={toggleAddNote} onSave={addNote} />
+            )}
+            <NoteList notes={notes} />
             <Footer />
         </div>
     );
