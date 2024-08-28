@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-export default function EditNote({ onFinish, onSave }) {
+export default function EditNote({ note, onFinish, onSave }) {
     const [newTitle, setNewTitle] = useState("");
     const [newContent, setNewContent] = useState("");
 
     const handleSave = () => {
-        onSave(newTitle, newContent);
+        onSave(note, newTitle, newContent);
         onFinish(); // Hide the EditNote component
     };
 
@@ -22,13 +22,13 @@ export default function EditNote({ onFinish, onSave }) {
                 type='text'
                 id='note-title'
                 name='note-title'
-                value={title}
+                value={newTitle}
                 onChange={(e) => setNewTitle(e.target.value)}
             />
 
             <label for='note-content'>New Note Content:</label>
             <textarea
-                value={content}
+                value={newContent}
                 onChange={(e) => setNewContent(e.target.value)}
             ></textarea>
 
