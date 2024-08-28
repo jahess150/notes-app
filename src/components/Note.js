@@ -1,15 +1,18 @@
 import React, { useState } from "react";
+import EditNote from "./EditNote";
 
 export default function Note({ note, onEdit, onDelete }) {
-    // Variables for editing notes
-    const [newTitle, setNewTitle] = useState("");
-    const [newContent, setNewContent] = useState("");
+    // Create boolean in state to decide whether to render the EditNote component
+    const [showEditNote, setShowEditNote] = useState(false);
+
+    // Function to toggle the EditNote component
+    const toggleEditNote = () => {
+        setShowEditNote(!showEditNote);
+    };
 
     // Handle editing a note
     const handleEdit = () => {
-        // TODO: Add logic to render inputs to enter new title, content and update state variables
-
-        onEdit(note, newTitle, newContent);
+        toggleEditNote();
     };
 
     // Handle deleting a note
@@ -21,9 +24,18 @@ export default function Note({ note, onEdit, onDelete }) {
         <li className='note'>
             <h3 className='note-title'>{note.title}</h3>
             <p className='note-content'>{note.content}</p>
-            <button className='icon-button' onClick={handleEdit}>
-                <span className='material-icons'>edit</span>
-            </button>
+            {!showEditNote && (
+                <button className='icon-button' onClick={handleEdit}>
+                    <span className='material-icons'>edit</span>
+                </button>
+            )}
+            {showEditNote && (
+                <EditNote
+                    note={note}
+                    onFinish={toggleEditNote}
+                    onSave={onEdit}
+                />
+            )}
             <button className='icon-button' onClick={handleDelete}>
                 <span className='material-icons'>delete</span>
             </button>
