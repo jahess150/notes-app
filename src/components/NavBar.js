@@ -3,7 +3,6 @@ import React from "react";
 export default function NavBar({ onAddClick }) {
     return (
         <nav className='navbar'>
-            <p>Hello, Josh!</p>
             <button className='icon-button'>
                 <span className='material-icons'>search</span>
             </button>

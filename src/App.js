@@ -6,6 +6,33 @@ import AddNote from "./components/AddNote";
 import "./App.css";
 
 function App() {
+    /* ------ USER GREETING FUNCTIONALITY ------ */
+    const [name, setName] = useState(localStorage.getItem("userName") || "");
+    const [greeting, setGreeting] = useState("");
+
+    // If user's name isn't store, prompt the user for it
+    useEffect(() => {
+        if (!name) {
+            const userName = prompt("Welcome! Please enter your name:");
+            if (userName) {
+                setName(userName);
+                localStorage.setItem("userName", userName);
+            }
+        }
+    }, [name]);
+
+    // Determine the time of day and set greeting
+    useEffect(() => {
+        const hours = new Date().getHours();
+        if (hours < 12) {
+            setGreeting(`Good morning, ${name}!`);
+        } else if (hours < 17) {
+            setGreeting(`Good afternoon, ${name}!`);
+        } else {
+            setGreeting(`Good evening, ${name}!`);
+        }
+    }, [name]);
+
     /* ------ NOTE FUNCTIONALITY ------ */
     // Define notes in state, and get them from localStorage if possible
     const [notes, setNotes] = useState(() => {
@@ -65,7 +92,9 @@ function App() {
     /* ------ APP ENTRY POINT ----- */
     return (
         <div className='App'>
-            <h1>Josh's Notes App</h1>
+            <header>
+                <h1>{greeting}</h1>
+            </header>
             <NavBar onAddClick={toggleAddNote} />
             {showAddNote && (
                 <AddNote onFinish={toggleAddNote} onSave={addNote} />
