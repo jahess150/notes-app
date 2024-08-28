@@ -1,18 +1,18 @@
 import React from "react";
 
-export default function NavBar() {
+export default function NavBar({ onAddClick }) {
     return (
         <nav className='navbar'>
             <p>Hello, Josh!</p>
-            <a href='/' className='icon-button'>
+            <button className='icon-button'>
                 <span className='material-icons'>search</span>
-            </a>
-            <a href='/' className='icon-button'>
+            </button>
+            <button onClick={onAddClick} className='icon-button'>
                 <span className='material-icons'>add</span>
-            </a>
-            <a href='/' className='icon-button'>
+            </button>
+            <button className='icon-button'>
                 <span className='material-icons'>settings</span>
-            </a>
+            </button>
         </nav>
     );
 }

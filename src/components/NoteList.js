@@ -1,10 +1,18 @@
 import React from "react";
 import Note from "./Note";
 
-export default function NoteList() {
+export default function NoteList({ notes, editFunction, deleteFunction }) {
     return (
-        <div className='note-list'>
-            <Note />
-        </div>
+        <ul className='note-list'>
+            {notes.map((note, index) => (
+                <React.Fragment key={index}>
+                    <Note
+                        note={note}
+                        onEdit={editFunction}
+                        onDelete={deleteFunction}
+                    />
+                </React.Fragment>
+            ))}
+        </ul>
     );
 }
