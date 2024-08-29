@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# Notes Chrome Extension
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a minimalist, modern note-taking Chrome extension built with React and Material-UI. The extension allows users to add, edit, and delete notes with ease, and features a clean, user-friendly interface.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+-   **Add Notes**: Quickly add new notes with titles and content.
+-   **Edit Notes**: Modify existing notes with updated content.
+-   **Delete Notes**: Remove notes that are no longer needed.
+-   **Material-UI Integration**: The UI is built using Material-UI components for a consistent, modern look and feel.
+-   **Light/Dark Mode** (Future Feature): The design is prepared for a light/dark mode switch.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To run this project locally, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/jahess150/notes-app.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd notes-app
+    ```
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
+4. Start the development server:
+    ```bash
+    npm start
+    ```
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Add a Note**: Click the "Add Note" button in the extension's interface. Enter a title and content, then click "Save."
+2. **Edit a Note**: Click the "Edit" button next to the note you want to modify. Make your changes and click "Save."
+3. **Delete a Note**: Click the "Delete" button next to the note you want to remove.
 
-### `npm run build`
+## Built With
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+-   [Material-UI](https://mui.com/) - A popular React UI framework that implements Google's Material Design.
+-   [mui-rte](https://github.com/niuware/mui-rte) - A rich text editor for Material-UI that allows users to format their notes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Future Enhancements
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   **Light/Dark Mode**: Implement a theme switcher to toggle between light and dark mode.
+-   **Rich Text Editing**: Add the ability to format note content with bold, italics, lists, etc.
+-   **Tagging and Categorization**: Allow users to tag and categorize notes for better organization.
 
-### `npm run eject`
+## Contributing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Contributions are welcome! If you have suggestions or improvements, please submit an issue or create a pull request.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## License
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Acknowledgments
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   [React](https://reactjs.org/)
+-   [Material-UI](https://mui.com/)
+-   [mui-rte](https://github.com/niuware/mui-rte)
