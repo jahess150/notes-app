@@ -5,12 +5,6 @@ import Footer from "./components/Footer";
 import AddNote from "./components/AddNote";
 import "./App.css";
 
-// Import Roboto fonts for Material Design components
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
-
 function App() {
     /* ------ USER GREETING FUNCTIONALITY ------ */
     const [name, setName] = useState(localStorage.getItem("userName") || "");
