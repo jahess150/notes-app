@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 
+// Material UI Components
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
+import SaveAltIcon from "@mui/icons-material/SaveAlt";
+import CloseIcon from "@mui/icons-material/Close";
+
 export default function AddNote({ onFinish, onSave }) {
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
@@ -14,14 +21,17 @@ export default function AddNote({ onFinish, onSave }) {
     };
 
     return (
-        <div className='add-note'>
+        <Box
+            component='form'
+            noValidate
+            autoComplete='off'
+            className='add-note'>
             <h2>Add a New Note</h2>
 
-            <label for='note-title'>Note Title:</label>
-            <input
-                type='text'
-                id='note-title'
-                name='note-title'
+            <TextField
+                required
+                id='outlined-required'
+                label='Title'
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
             />
@@ -29,11 +39,20 @@ export default function AddNote({ onFinish, onSave }) {
             <label for='note-content'>Note Content:</label>
             <textarea
                 value={content}
-                onChange={(e) => setContent(e.target.value)}
-            ></textarea>
+                onChange={(e) => setContent(e.target.value)}></textarea>
 
-            <button onClick={handleSave}>Save</button>
-            <button onClick={handleCancel}>Cancel</button>
-        </div>
+            <Button
+                variant='contained'
+                startIcon={<SaveAltIcon />}
+                onClick={handleSave}>
+                Save
+            </Button>
+            <Button
+                variant='contained'
+                startIcon={<CloseIcon />}
+                onClick={handleCancel}>
+                Cancel
+            </Button>
+        </Box>
     );
 }
